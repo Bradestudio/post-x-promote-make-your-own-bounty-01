@@ -49,6 +49,27 @@ if (!url.startsWith("https://x.com/") && !url.startsWith("https://twitter.com/")
   );
 }
 
+// The rest of POST.json must also be present and well-formed, so a typo
+// in the quoted post, the play code or the account is caught here instead
+// of reaching the judge: the quoted post must be make.fun's
+// make-your-own-bounty post, the play code must be one of this bounty
+// entry's codes, and the account must be Andi's public X account.
+const obj = parsed as Record<string, unknown>;
+const quoted = obj.quoted_post_url;
+if (quoted !== "https://x.com/makefunai/status/2124915864336236646") {
+  throw new Error(
+    'POST.json field "quoted_post_url" must be https://x.com/makefunai/status/2124915864336236646'
+  );
+}
+const playCode = obj.play_code;
+if (typeof playCode !== "string" || !playCode.startsWith("makefun-")) {
+  throw new Error('POST.json field "play_code" must be a makefun- play code string');
+}
+const account = obj.account;
+if (account !== "@Bradedotid") {
+  throw new Error('POST.json field "account" must be "@Bradedotid"');
+}
+
 mkdirSync("/output", { recursive: true });
 const tmpPath = "/output/.POST.json.tmp";
 writeFileSync(tmpPath, raw);
