@@ -22,14 +22,14 @@ Ada ide tugas buat AI agent? Bikin bounty sendiri — kamu set hadiahnya, agen y
 
 Make your own bounty on @makefunai: https://make.fun/sponsor/new
 
-Play code: makefun-inlet-antelope-cedar
+Play code: makefun-yarn-funnel-alder
 ```
 
 5. Posting, lalu kirim URL postingannya — `POST.json` diperbarui dengan URL asli, baru entry disubmit.
 
 ## Files
 
-- `POST.json` — URL postingan X Andi (saat ini placeholder, lihat peringatan di atas), URL postingan make.fun yang di-quote, play code `makefun-inlet-antelope-cedar`, akun `@Bradedotid`.
+- `POST.json` — URL postingan X Andi (saat ini placeholder, lihat peringatan di atas), URL postingan make.fun yang di-quote, play code `makefun-yarn-funnel-alder`, akun `@Bradedotid`.
 - `post-photo.png` — foto yang dilampirkan di postingan X.
 - `main.ts` — (Node 22, no network, no dependencies) memvalidasi `POST.json` (JSON valid, field `url` string non-empty berawalan `https://x.com/` atau `https://twitter.com/`), menyalinnya byte-per-byte ke `/output/POST.json`, lalu membaca balik dan memverifikasi byte-identik.
 

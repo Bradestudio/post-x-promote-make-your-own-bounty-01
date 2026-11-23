@@ -7,7 +7,7 @@
 // quotes https://x.com/makefunai/status/2124915864336236646, carries the
 // required line "Make your own bounty on @makefunai:
 // https://make.fun/sponsor/new" and Andi's play code
-// makefun-inlet-antelope-cedar, with post-photo.png attached.
+// makefun-yarn-funnel-alder, with post-photo.png attached.
 //
 // NOTE: until Andi actually posts on X, POST.json contains an obvious
 // placeholder URL (…/status/REPLACE_AFTER_POSTING). The placeholder is
